@@ -1,10 +1,10 @@
-# Student Management Dashboard
+tudent Management Dashboard
 
 A React single-page application that allows adding, editing, and viewing students. Each student has a name, email, enrolled course, and profile image.
 
 ## Project Overview
 
-![Project Screenshot](attached_image)
+![Project Screenshot](assets/dashboard-screenshot.png)
 
 ## Architecture and Data Flow
 

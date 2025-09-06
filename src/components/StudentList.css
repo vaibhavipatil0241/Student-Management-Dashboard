@@ -1,0 +1,78 @@
+/* StudentList.css */
+
+.student-list-container {
+  margin-top: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+  padding: 1.5rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.student-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0; /* Tailwind gray-200 */
+  flex-wrap: wrap;
+}
+
+.student-item:last-child {
+  border-bottom: none;
+}
+
+.student-name,
+.student-email,
+.student-course {
+  flex: 1 1 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  color: #1f2937; /* Tailwind gray-800 */
+}
+
+.edit-btn {
+  background-color: #3b82f6; /* Tailwind blue-500 */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.edit-btn:hover,
+.edit-btn:focus {
+  background-color: #2563eb; /* Tailwind blue-600 */
+  outline: none;
+}
+
+@media (max-width: 640px) {
+  .student-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 0;
+  }
+
+  .student-name,
+  .student-email,
+  .student-course {
+    white-space: normal;
+  }
+
+  .edit-btn {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+}

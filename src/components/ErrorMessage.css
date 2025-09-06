@@ -1,0 +1,81 @@
+/* ErrorMessage.css */
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: white;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  margin: 2rem auto;
+  max-width: 500px;
+}
+
+.error-message.error {
+  border: 2px solid var(--error-500);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.error-message.warning {
+  border: 2px solid var(--warning-500);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.error-message.info {
+  border: 2px solid var(--primary-500);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.error-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-text h3 {
+  font-size: var(--text-xl);
+  margin-bottom: 0.5rem;
+  color: var(--gray-900);
+}
+
+.error-text p {
+  color: var(--gray-600);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  min-height: 44px;
+}
+
+.btn-primary {
+  background: #667eea;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #5a67d8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}

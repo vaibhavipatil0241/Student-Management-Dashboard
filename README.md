@@ -1,4 +1,4 @@
-tudent Management Dashboard
+Student Management Dashboard
 
 A React single-page application that allows adding, editing, and viewing students. Each student has a name, email, enrolled course, and profile image.
 
@@ -8,7 +8,7 @@ A React single-page application that allows adding, editing, and viewing student
 
 ## Architecture and Data Flow
 
-![Flow Diagram](generated_image:22)
+![Flow Diagram](flow-diagram:22)
 
 ## Features
 
@@ -23,19 +23,17 @@ A React single-page application that allows adding, editing, and viewing student
 1. Clone the repository:
 git clone https://github.com/vaibhavipatil0241/student-management-dashboard.git
 
-text
 2. Navigate into the project folder:
 cd student-management-dashboard
 
-text
+
 3. Install dependencies:
 npm install
 
-text
+
 4. Start the development server:
 npm start
 
-text
 
 ## Usage
 

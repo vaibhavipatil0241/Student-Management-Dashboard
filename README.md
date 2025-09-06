@@ -1,17 +1,59 @@
-<<<<<<< HEAD
-# student-management-dashboard
-Student Management Dashboard as a single-page application using React.
-=======
-# React + Vite
+# Student Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React single-page application that allows adding, editing, and viewing students. Each student has a name, email, enrolled course, and profile image.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Project Screenshot](attached_image)
 
-## Expanding the ESLint configuration
+## Architecture and Data Flow
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> cb87f8a (Initial commit - Student Management Dashboard)
+![Flow Diagram](generated_image:22)
+
+## Features
+
+- Add new students via a validated form
+- List all students
+- Edit existing student details
+- Responsive, attractive UI for desktop and mobile
+- Fetches courses list from mock API using async/await
+
+## Installation
+
+1. Clone the repository:
+git clone https://github.com/vaibhavipatil0241/student-management-dashboard.git
+
+text
+2. Navigate into the project folder:
+cd student-management-dashboard
+
+text
+3. Install dependencies:
+npm install
+
+text
+4. Start the development server:
+npm start
+
+text
+
+## Usage
+
+1. Fill out the form on the left to add or edit student details.  
+2. View and edit existing students in the table on the right.  
+3. The UI adapts to mobile and desktop screens.
+
+## Technologies
+
+- React (Hooks, Functional Components)  
+- CSS Grid and Flexbox for layout  
+- Custom CSS for styling  
+- Async/Await for API calls  
+
+## Contributing
+
+Feel free to submit issues or pull requests.
+
+## License
+
+MIT License

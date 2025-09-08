@@ -52,27 +52,33 @@ Data flows top-down via props; interactions bubble up through callbacks to keep 
 
 ## Project Structure
 
-student-management-dashboard/
-├── assets/
-│ └── dashboard-screenshot.png
-├── components/
-│ ├── StatsCards.jsx
-│ ├── SearchBar.jsx
-│ ├── StudentList.jsx
-│ ├── StudentCard.jsx
-│ ├── StudentModal.jsx
-│ └── StudentDetailsModal.jsx
-├── hooks/
-│ └── useStudentManager.js
-├── services/
-│ └── coursesService.js
-├── App.jsx
-├── App.css
-└── README.md
+- **assets/**  
+  Contains static image files and screenshots used in the project.  
+  - `dashboard-screenshot.png` — Main dashboard overview screenshot.
 
-text
+- **components/**  
+  Holds reusable React UI components organized by feature.  
+  - `StatsCards.jsx` — Displays summary cards for total students, active students, and courses.  
+  - `SearchBar.jsx` — Search input field and Add Student button.  
+  - `StudentList.jsx` — Renders the list/grid of student cards.  
+  - `StudentCard.jsx` — Represents individual student cards with actions.  
+  - `StudentModal.jsx` — Form modal for adding and editing student details.  
+  - `StudentDetailsModal.jsx` — Modal for viewing detailed student information.
 
----
+- **hooks/**  
+  Contains custom React hooks to encapsulate state logic.  
+  - `useStudentManager.js` — Manages student data state with persistence to localStorage.
+
+- **services/**  
+  Services for data fetching and business logic.  
+  - `coursesService.js` — Simulated API to fetch course-related data.
+
+- **App.jsx**  
+  The root React component integrating routing, state, and UI components.
+
+- **App.css**  
+  Contains global and component-specific styles.
+
 
 ## Getting Started
 

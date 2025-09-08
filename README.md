@@ -21,53 +21,53 @@ The UI is fully responsive, adapting seamlessly between desktop and mobile layou
 
 The application’s architecture centers on functional React components with unidirectional data flow:
 
-1. useStudentManager Hook
+1.useStudentManager Hook
 
-Manages the students state array
+ Manages the students state array
 
-Initializes from localStorage or fallback sample data
+ Initializes from localStorage or fallback sample data
 
-Provides addStudent, updateStudent, and deleteStudent functions that update state and persist changes
+ Provides addStudent, updateStudent, and deleteStudent functions that update state and persist changes
 
-2. App Component
+2.App Component
 
-Fetches course list asynchronously via coursesService
+ Fetches course list asynchronously via coursesService
 
-Tracks students, editingStudent, searchTerm, and showModal state
+ Tracks students, editingStudent, searchTerm, and showModal state
 
-Filters students for display based on searchTerm
+ Filters students for display based on searchTerm
 
-Computes derived values like activeStudents for stats cards
+ Computes derived values like activeStudents for stats cards
 
-Handles opening/closing modals for add, edit, and view operations
+ Handles opening/closing modals for add, edit, and view operations
 
-3. StatsCards Component
+3.StatsCards Component
 
-Receives totalStudents, activeStudents, and totalCourses as props
+ Receives totalStudents, activeStudents, and totalCourses as props
 
-Renders three cards with icons and gradient backgrounds
+ Renders three cards with icons and gradient backgrounds
 
-4. SearchBar Component
+4.SearchBar Component
 
-Receives searchValue, onSearchChange, and onAddClick props
+ Receives searchValue, onSearchChange, and onAddClick props
 
-Renders a text input for live filtering and an Add Student button
+ Renders a text input for live filtering and an Add Student button
 
-5. StudentList & StudentCard Components
+5.StudentList & StudentCard Components
 
-StudentList maps over filtered students and renders StudentCard
+ StudentList maps over filtered students and renders StudentCard
 
-Each card shows key details and action buttons for View, Edit, and Delete
+ Each card shows key details and action buttons for View, Edit, and Delete
 
-Clicking View opens StudentDetailsModal; Edit and Delete invoke handler props
+ Clicking View opens StudentDetailsModal; Edit and Delete invoke handler props
 
-6. StudentModal & StudentDetailsModal Components
+6.StudentModal & StudentDetailsModal Components
 
-StudentModal is used for both adding and editing, with form validation and status/course dropdowns
+ StudentModal is used for both adding and editing, with form validation and status/course dropdowns
 
-StudentDetailsModal displays read-only student info with a prominent Edit button
+ StudentDetailsModal displays read-only student info with a prominent Edit button
 
-All components communicate via props and callbacks, maintaining a clear separation of concerns. State updates occur only in the custom hook, ensuring predictable, testable data flow and easy persistence via localStorage.
+ All components communicate via props and callbacks, maintaining a clear separation of concerns. State updates occur only in the custom hook, ensuring predictable, testable  data flow and easy persistence via localStorage.
 
 ## Features
 

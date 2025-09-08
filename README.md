@@ -4,7 +4,11 @@ Efficiently manage and track student data with this responsive React dashboard f
 
 ---
 
+The deployed project link : https://student-management-dashboard-five.vercel.app/
+
 ## Project Overview
+
+
 
 This React-based dashboard simplifies student management by allowing you to:  
 - View key statistics: total students, active students, and courses  

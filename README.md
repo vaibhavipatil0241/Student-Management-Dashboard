@@ -3,12 +3,71 @@ Student Management Dashboard
 A React single-page application that allows adding, editing, and viewing students. Each student has a name, email, enrolled course, and profile image.
 
 ## Project Overview
+This Student Management Dashboard is a React single-page application designed to make managing student records intuitive and efficient. It features:
 
-![Project Screenshot](assets/dashboard-screenshot.png)
+Student Cards displaying profile initials or images, name, email, enrolled course, enrollment date, and status badge (active/inactive)
+
+Statistics Cards showing total students, active students, and total courses at a glance
+
+Search Bar with live filtering by name, email, or course, plus a prominent Add Student button
+
+Modals for viewing detailed student information, editing existing records, and adding new students
+
+Persistent Storage using localStorage so all additions, updates, and deletions survive page reloads
+
+The UI is fully responsive, adapting seamlessly between desktop and mobile layouts, and uses modern CSS for smooth hover effects, card layouts, and form validation feedback.
 
 ## Architecture and Data Flow
 
-![Flow Diagram](flow-diagram:22)
+The application’s architecture centers on functional React components with unidirectional data flow:
+
+useStudentManager Hook
+
+Manages the students state array
+
+Initializes from localStorage or fallback sample data
+
+Provides addStudent, updateStudent, and deleteStudent functions that update state and persist changes
+
+App Component
+
+Fetches course list asynchronously via coursesService
+
+Tracks students, editingStudent, searchTerm, and showModal state
+
+Filters students for display based on searchTerm
+
+Computes derived values like activeStudents for stats cards
+
+Handles opening/closing modals for add, edit, and view operations
+
+StatsCards Component
+
+Receives totalStudents, activeStudents, and totalCourses as props
+
+Renders three cards with icons and gradient backgrounds
+
+SearchBar Component
+
+Receives searchValue, onSearchChange, and onAddClick props
+
+Renders a text input for live filtering and an Add Student button
+
+StudentList & StudentCard Components
+
+StudentList maps over filtered students and renders StudentCard
+
+Each card shows key details and action buttons for View, Edit, and Delete
+
+Clicking View opens StudentDetailsModal; Edit and Delete invoke handler props
+
+StudentModal & StudentDetailsModal Components
+
+StudentModal is used for both adding and editing, with form validation and status/course dropdowns
+
+StudentDetailsModal displays read-only student info with a prominent Edit button
+
+All components communicate via props and callbacks, maintaining a clear separation of concerns. State updates occur only in the custom hook, ensuring predictable, testable data flow and easy persistence via localStorage.
 
 ## Features
 

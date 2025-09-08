@@ -21,7 +21,7 @@ The UI is fully responsive, adapting seamlessly between desktop and mobile layou
 
 The application’s architecture centers on functional React components with unidirectional data flow:
 
-useStudentManager Hook
+1. useStudentManager Hook
 
 Manages the students state array
 
@@ -29,7 +29,7 @@ Initializes from localStorage or fallback sample data
 
 Provides addStudent, updateStudent, and deleteStudent functions that update state and persist changes
 
-App Component
+2. App Component
 
 Fetches course list asynchronously via coursesService
 
@@ -41,19 +41,19 @@ Computes derived values like activeStudents for stats cards
 
 Handles opening/closing modals for add, edit, and view operations
 
-StatsCards Component
+3. StatsCards Component
 
 Receives totalStudents, activeStudents, and totalCourses as props
 
 Renders three cards with icons and gradient backgrounds
 
-SearchBar Component
+4. SearchBar Component
 
 Receives searchValue, onSearchChange, and onAddClick props
 
 Renders a text input for live filtering and an Add Student button
 
-StudentList & StudentCard Components
+5. StudentList & StudentCard Components
 
 StudentList maps over filtered students and renders StudentCard
 
@@ -61,7 +61,7 @@ Each card shows key details and action buttons for View, Edit, and Delete
 
 Clicking View opens StudentDetailsModal; Edit and Delete invoke handler props
 
-StudentModal & StudentDetailsModal Components
+6. StudentModal & StudentDetailsModal Components
 
 StudentModal is used for both adding and editing, with form validation and status/course dropdowns
 
